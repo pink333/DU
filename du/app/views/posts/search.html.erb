@@ -1,0 +1,9 @@
+<%= form_tag('/posts/search',:method => 'get') do %>
+  <%= text_field_tag :search %>
+  <%= submit_tag '検索' , :name => nil %>
+<% end %>
+<% @posts.each do |f| %>
+  <h3><%= link_to f.name , f %></h3>
+ <h3> <%= f.teach %></h3>
+<% end %>
+

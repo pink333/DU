@@ -1,0 +1,15 @@
+<%= form_for ([@post, @post.comments.build]) do |f| %>
+  
+   <div class="form_wrapper">
+    <div class="form_box">
+      <div class="body"><%= f.text_area :body,:placeholder => "文字を入力...", class: "bd"  %></div> 
+      <% if user_signed_in? %>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+      <%= f.hidden_field :post_id, :value => @post.id %>
+      <% end %>
+      <div class="form_button">
+        <%= f.submit ' レビューを送信' , class: "btn" %>
+       </div>
+      </div>
+    <%  end %>
+  </div>

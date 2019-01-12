@@ -1,0 +1,6 @@
+  <div class="comments_content">
+    <div class="comment_body"><%= comment.body %></div>
+    <% if  current_user == comment.user %>
+    <div class="cd"><%= link_to '削除', [comment.post, comment], method: :delete, class: "buttn", date:{confirm: 'Are you sure'} %></div>
+    <% end %>
+    </div>

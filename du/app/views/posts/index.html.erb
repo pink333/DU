@@ -1,0 +1,17 @@
+<div class="index">
+<div class="search">
+  <%= form_tag(root_path,:method => 'get') do %>
+    <%= text_field_tag :search, nil, placeholder: "科目名or教員名" %>
+    <%= submit_tag '検索' , :name => nil , class: "btn"%>
+  <% end %>
+</div>
+
+<div class="post_wrapper">
+  <% @posts.each do |post| %>
+  <div class="post_box">
+    <h3 class="title"><%= link_to  post.name, post %></h3>
+    <h3 class="title"><%= post.teach  %></h3>
+  </div>
+  <% end %>
+ </div>
+</div>

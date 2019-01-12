@@ -1,0 +1,15 @@
+<div class="show>"
+ <div class="content_wrapper">
+    <h3><div class="content">科目:<%= @post.name %></div></h3>
+    <h3><div class="content">担当:<%= @post.teach %></div></h3>
+    <h3><div class="content">教科書:<%= @post.book %></div></h3>
+    <h3><div class="content">評価:<%= @post.el %></div></h3>
+    <h3><div class="content">注意:<%= @post.contact %></div></h3>
+ <div class="coments">
+  <h4>レビュー：</h4>
+  <%= render @post.comments %>
+  <%= render "comments/form" %>
+ </div>
+</div>
+
+
