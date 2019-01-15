@@ -21,7 +21,8 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<:  *default
-  dapter:  postgresql
-  database:  db/production.postgresql
-
+    <<:  *default
+  adapter:  postgresql
+  encoding:  unicode
+  pool:  5
+ 
